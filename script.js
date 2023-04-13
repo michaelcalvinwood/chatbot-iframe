@@ -123,6 +123,16 @@ const pageLoaded = () => {
             handleSubmit(e)
         }
     })
+    const chatImage = document.getElementById('chatbotImage');
+    const chatbotContainer = document.getElementById('chatbotContainer');
+
+    chatImage.addEventListener('click', () => {
+        
+        chatImage.classList.add('hidden');
+        chatbotContainer.classList.remove('hidden');
+        chatbotContainer.classList.remove('chatbotClosed');
+        chatbotContainer.classList.add('chatbotFullsize');
+    })
 }
 
 window.addEventListener('DOMContentLoaded', pageLoaded);
