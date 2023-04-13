@@ -116,7 +116,7 @@ const handleSubmit = async (e) => {
 
 const pageLoaded = () => {
     form = document.querySelector('form')
-    chatContainer = document.querySelector('#chat_container')
+    chatContainer = document.querySelector('#chatContainer')
     form.addEventListener('submit', handleSubmit)
     form.addEventListener('keyup', (e) => {
         if (e.keyCode === 13) {
@@ -126,12 +126,19 @@ const pageLoaded = () => {
     const chatImage = document.getElementById('chatbotImage');
     const chatbotContainer = document.getElementById('chatbotContainer');
 
-    chatImage.addEventListener('click', () => {
-        
+    chatImage.addEventListener('click', () => {     
         chatImage.classList.add('hidden');
         chatbotContainer.classList.remove('hidden');
         chatbotContainer.classList.remove('chatbotClosed');
         chatbotContainer.classList.add('chatbotFullsize');
+    })
+
+    const chatbotCloseIcon = document.getElementById('chatbotCloseIcon');
+    chatbotCloseIcon.addEventListener('click', () => {
+        chatbotContainer.classList.add('hidden');
+        chatbotContainer.classList.add('chatbotClosed');
+        chatbotContainer.classList.remove('chatbotFullsize');
+        chatImage.classList.remove('hidden');
     })
 }
 

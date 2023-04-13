@@ -237,13 +237,12 @@ body {
   bottom: 0;
   right: 0;
   transition: height .5s ease-in-out;
-
-
 }
 .chatbotClosed {
   height: 0;
   width: 0;
-
+  max-height: 0;
+  max-width: 0;
 }
 .chatbotFullsize {
   width: 100%;
@@ -264,18 +263,26 @@ body {
   justify-content: space-between;
 }
 
-#chat_container {
+#chatbotCloseIcon {
+  position: absolute;
+  z-index: 10;
+  top: 5px;
+  right: 9px;
+  cursor: pointer;
+}
+
+#chatContainer {
   flex: 1;
   width: 100%;
   height: 100%;
-  overflow-y: scroll;
+  overflow-y: auto;
 
   display: flex;
   flex-direction: column;
   gap: 10px;
 
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+  // -ms-overflow-style: none;
+  // scrollbar-width: none;
 
   padding-bottom: 20px;
   scroll-behavior: smooth;
