@@ -16,8 +16,20 @@
   border: none !important;
 }
 
+#chatbotApp button:hover {
+  background-color: transparent !important;
+  border: none !important;
+}
+
+
 #chatbotApp img {
   border: none !important;
+  background: transparent !important;
+}
+
+#chatbotApp img:hover {
+  border: none !important;
+  background-color: transparent !important;
 }
 
 #chatbotImage {
@@ -38,8 +50,9 @@
   right: 0;
   height: 500px;
   width: 500px;
-  animation: up-down 7.5s infinite ease-in-out;
+  animation: up-down 7.5s infinite ease-in-out; 
 }
+
 #instantChatbotImageContainer #chatbot {
   margin: auto;
   position: absolute;

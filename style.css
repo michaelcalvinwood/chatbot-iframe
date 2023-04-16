@@ -70,7 +70,8 @@ body {
   height: 20px;
   width: 10px;
   background-color: #3D3E45;
-  animation: antenna-appear 7.5s infinite ease-in-out;
+  /* animation: antenna-appear 7.5s infinite ease-in-out; */
+  animation: antenna-appear 7.5s  ease-in-out;
 }
 .container #antenna #beam {
   position: absolute;
@@ -80,7 +81,7 @@ body {
   width: 20px;
   border-radius: 50%;
   background-color: #3D3E45;
-  animation: beam-appear 7.5s infinite ease-in-out;
+  animation: beam-appear 7.5s  ease-in-out;
 }
 .container #antenna #beam-pulsar {
   position: absolute;
@@ -90,7 +91,7 @@ body {
   width: 20px;
   border-radius: 50%;
   background-color: #3D3E45;
-  animation: beam-pulsar-appear 7.5s infinite ease-in-out;
+  animation: beam-pulsar-appear 7.5s  ease-in-out;
 }
 .container .dot {
   height: 17.5px;
@@ -104,16 +105,16 @@ body {
   left: -65px;
   background-color: #3D3E45;
   border-radius: 50%;
-  animation: pulse-outer 7.5s infinite ease-in-out;
+  animation: pulse-outer 7.5s  ease-in-out;
 }
 .container .dot:nth-child(2) {
   left: 0;
-  animation: pulse-inner 7.5s infinite ease-in-out;
+  animation: pulse-inner 7.5s  ease-in-out;
   animation-delay: 0.2s;
 }
 .container .dot:nth-child(3) {
   left: 65px;
-  animation: pulse-outer 7.5s infinite ease-in-out;
+  animation: pulse-outer 7.5s  ease-in-out;
   animation-delay: 0.4s;
 }
 @keyframes pulse-inner {
