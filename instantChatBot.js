@@ -83,19 +83,22 @@ const handleIntantChatbotSubmit = async (e) => {
     // messageDiv.innerHTML = "..."
     const intervalId = loader(messageDiv)
 
-    setTimeout(() => {
-        clearInterval(intervalId);
-        typeText(messageDiv, "here we are");
-    }, 2000)
-    return;
+    // setTimeout(() => {
+    //     clearInterval(intervalId);
+    //     typeText(messageDiv, "here we are");
+    // }, 2000)
+    // return;
 
-    const response = await fetch('https://codex-im0y.onrender.com/', {
+    console.log('instantChatbot host', instantChatbotHost);
+  
+    const response = await fetch(`${instantChatbotHost}`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-            prompt: data.get('prompt')
+            prompt: data.get('prompt'),
+            token: instantChatbotToken
         })
     })
 
@@ -116,7 +119,7 @@ const handleIntantChatbotSubmit = async (e) => {
 }
 
 const instantChatbotLoaded = () => {
-    console.log('instantChatbot: loaded');
+    console.log('instantChatbot: loaded', instantChatbotToken);
     const body = document.querySelector('body');
     // const chatDiv = document.createElement('div');
     // chatDiv.style.width = 'fit-content';
