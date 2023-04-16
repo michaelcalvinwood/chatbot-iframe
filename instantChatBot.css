@@ -11,6 +11,15 @@
   background-color: #F6F6F6;
 } */
 
+#chatbotApp button {
+  background: transparent;
+  border: none !important;
+}
+
+#chatbotApp img {
+  border: none !important;
+}
+
 #chatbotImage {
   position: fixed;
   bottom: 36px;

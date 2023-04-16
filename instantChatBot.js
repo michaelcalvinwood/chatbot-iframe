@@ -58,7 +58,8 @@ function chatStripe(isAi, value, uniqueId) {
     )
 }
 
-const handleSubmit = async (e) => {
+const handleIntantChatbotSubmit = async (e) => {
+    console.log('instantChatbot: got submit');
     e.preventDefault()
 
     const data = new FormData(form)
@@ -114,7 +115,8 @@ const handleSubmit = async (e) => {
     }
 }
 
-const pageLoaded = () => {
+const instantChatbotLoaded = () => {
+    console.log('instantChatbot: loaded');
     const body = document.querySelector('body');
     // const chatDiv = document.createElement('div');
     // chatDiv.style.width = 'fit-content';
@@ -149,7 +151,7 @@ const pageLoaded = () => {
         <div id="chatbotApp">
             <img id="chatbotCloseIcon" src="https://instantchatbot.net/assets/close.svg" />
                 <div id="chatContainer"></div>
-                <form>
+                <form id="instantChatbotForm">
                     <textarea name="prompt" rows="1" cols="1" placeholder="Ask AI..."></textarea>
                     <button type="submit"><img src="https://instantchatbot.net/assets/send.svg" alt="send" />
                 </form>
@@ -186,12 +188,14 @@ const pageLoaded = () => {
     //     </div>
     // `;
     //body.append(chatDiv);
-    form = document.querySelector('form')
+    form = document.getElementById('instantChatbotForm');
+
+    console.log('instantChatbot form', form);
     chatContainer = document.querySelector('#chatContainer')
-    form.addEventListener('submit', handleSubmit)
+    form.addEventListener('submit', handleIntantChatbotSubmit)
     form.addEventListener('keyup', (e) => {
         if (e.keyCode === 13) {
-            handleSubmit(e)
+            handleIntantChatbotSubmit(e)
         }
     })
     const chatImage = document.getElementById('chatbotImage');
@@ -213,5 +217,5 @@ const pageLoaded = () => {
     })
 }
 
-window.addEventListener('DOMContentLoaded', pageLoaded);
+window.addEventListener('DOMContentLoaded', instantChatbotLoaded);
 
