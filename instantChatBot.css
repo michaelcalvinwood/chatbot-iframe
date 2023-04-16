@@ -447,9 +447,18 @@
   flex-direction: column;
   gap: 10px;
   padding-bottom: 20px;
+  padding-right: 8px;
   scroll-behavior: smooth;
 }
 
+#chatContainer::-webkit-scrollbar {
+  background: #343541 !important;
+} 
+
+#chatContainer::-webkit-scrollbar-thumb {
+  background: #dcdcdc;
+  border-radius: 6px;
+}
 /* hides scrollbar */
 #chat_container::-webkit-scrollbar {
   display: none;
