@@ -12,7 +12,7 @@
 } */
 
 #chatbotApp button {
-  background: transparent;
+  background-color: transparent !important;
   border: none !important;
 }
 
@@ -451,18 +451,25 @@
   scroll-behavior: smooth;
 }
 
-#chatContainer::-webkit-scrollbar {
+#chatContainer::-webkit-scrollbar, #instantChatbotForm textarea::-webkit-scrollbar{
   background: #343541 !important;
 } 
 
-#chatContainer::-webkit-scrollbar-thumb {
+#chatContainer::-webkit-scrollbar-thumb, #instantChatbotForm textarea::-webkit-scrollbar-thumb {
   background: #dcdcdc;
   border-radius: 6px;
 }
+
+#instantChatbotForm textarea {
+  resize: none
+}
+
 /* hides scrollbar */
 #chat_container::-webkit-scrollbar {
   display: none;
 }
+
+
 
 .wrapper {
   width: 100%;
